@@ -1,0 +1,72 @@
+
+   <div class="form">
+    <form [formGroup]="myForm" (ngSubmit)="submitForm()" class="flex flex-col gap-y-2  ">
+        <div class="container__input">
+          <mat-form-field 
+          appearance="outline"   >
+            <mat-label>Email Address</mat-label>
+            <input
+             matInput 
+             placeholder="e@a"
+             required
+             type="email"
+             formControlName="email"
+             id="email"
+               >
+               <mat-error class="pt-0 flex flex-col gap-y-1"  *ngIf="myForm.get('email')!.touched && myForm.get('email')!.hasError('required')">
+                   Email is requied
+               </mat-error>
+               <mat-error class="pt-0 flex flex-col gap-y-1" *ngIf="myForm.get('email')!.touched && myForm.get('email')!.hasError('pattern')">
+                 Invaild Email
+               </mat-error>
+          </mat-form-field>
+    
+         </div>
+         <div class="container__input " >
+            <mat-form-field appearance="outline" >
+              <mat-label> password</mat-label>
+               <input matInput 
+                class="input"
+                type="string" 
+               formControlName="password"
+                [type]="hide ? 'password' : 'text'"   
+                required
+               id="password"
+                >
+              <button mat-icon-button  matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                <mat-icon >{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+              </button>
+              <mat-error class="pt-0 flex flex-col gap-y-1"  *ngIf="myForm.get('password')!.touched && myForm.get('password')!.hasError('required')">
+                Password is required.      
+              </mat-error>
+              <mat-error *ngIf="myForm.get('password')!.hasError('minlength')" class="w-max ml-[-1.1rem]">
+                Password must be between 8-20 characters
+              </mat-error>
+              <mat-error *ngIf="myForm.get('password')!.hasError('maxlength')" class="w-max ml-[-1.1rem]">
+                Password must be between 8-20 characters 
+              </mat-error>
+            </mat-form-field>
+          </div> 
+          <div class="container__input__buttom">
+            <div  class="container__input__forget" >
+              <button >
+                <a routerLink="#" class="underline">
+                 Forget Password?
+               </a>
+             </button>
+             <div class="container__remember_me">
+              <mat-checkbox 
+              formControlName="remember_me"
+              > Remember Me</mat-checkbox>
+             </div>
+             <div  class="container__input__button" >
+              <button
+              type="submit" 
+              [disabled]="myForm.invalid"> 
+                login</button>
+             </div>
+            </div>
+        
+        </div>
+       </form>
+   </div>

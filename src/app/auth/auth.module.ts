@@ -10,12 +10,16 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from'@angular/material/button'
 import { ErrorStateMatcher, ShowOnDirtyErrorStateMatcher } from '@angular/material/core';
 import { HttpClientModule } from '@angular/common/http';
+import { LeftsectionComponent } from './leftsection/leftsection.component';
+import { FormComponent } from './form/form.component';
 
 
 
 @NgModule({
   declarations: [
-    LoginComponent
+    LoginComponent,
+    LeftsectionComponent,
+    FormComponent
   ],
   imports: [
     CommonModule,
@@ -28,7 +32,8 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule 
   ],
   exports: [
-    LoginComponent
+    LoginComponent,
+ 
   ],
   providers: [  {provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher}]
 })
