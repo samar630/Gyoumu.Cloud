@@ -1,4 +1,5 @@
-.container-section {
+
+.container-section{
   min-height: 100vh;
   width: 100vw;
   background-size: 100vw;
@@ -12,33 +13,37 @@
   flex-direction: column;
   position: relative;
 }
-.container-section .body-section {
-  z-index: 1;
-  position: sticky;
-}
-.container-section .body-section .header {
-  color: var(--primary-color);
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 20px 100px;
-  background-color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-  border-bottom: 2px solid rgba(62, 112, 121, 0.2);
-}
-.container-section .body-section .logo {
-  color: var(--primary-color);
-  font-size: 25px;
-  text-decoration: none;
-  font-weight: 600;
-  cursor: default;
-}
-.container-section .login_router {
+  .body-section{
+    z-index: 1;
+    position: sticky;
+  }
+    .header{
+     color: var(--primary-color);
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     padding: 20px 100px;
+     background-color:white;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     backdrop-filter: blur(10px);
+     border-bottom: 2px solid rgba(62, 112, 121, 0.2);
+    }
+ 
+ 
+ .logo{
+   color: var(--primary-color);
+     font-size: 25px;
+     text-decoration: none;
+     font-weight: 600;
+     cursor: default;
+ }
+ 
+ 
+ 
+.login_router{
   position: absolute;
   bottom: 50%;
   left: 40%;
@@ -49,15 +54,19 @@
   justify-items: center;
   justify-content: center;
 }
-.container-section .login_router h1 {
-  color: black;
-  font-weight: 600;
-}
-.container-section .login_router .button_login_center {
-  border: 1px solid var(--primary-color);
-  width: 8rem;
-  height: 2rem;
-  text-transform: uppercase;
-  margin-left: 5rem;
-  border-radius: 5px;
-}/*# sourceMappingURL=home.component.css.map */
+  h1{
+    color: black;
+    font-weight: 600;
+  }
+   .button_login_center {
+    border: 1px solid var(--primary-color);
+    width: 8rem;
+    height: 2rem;
+    text-transform: uppercase;
+     margin-left: 5rem;
+     border-radius: 5px;
+   }
+   
+  
+
+

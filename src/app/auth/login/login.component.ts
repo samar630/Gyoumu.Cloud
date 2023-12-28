@@ -11,7 +11,7 @@ import { loginInterface } from 'src/app/moduleLogin/login.interface';
 
   selector: 'login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss'],
+  styleUrls: ['./login.component.css'],
 
 })
 export class LoginComponent {
