@@ -1,13 +1,11 @@
 
 <div>
-  
-  <div *ngIf="currentUrl  !== '/login' ">
+   <div *ngIf="currentUrl  !== '/login' ">
     <home></home>
   </div>
-
-  <div  *ngIf="currentUrl === '/login' ">
+<div  *ngIf="currentUrl === '/login' ">
     <login></login>
    </div>
-   </div>
+</div>
 
 <router-outlet></router-outlet>

@@ -34,10 +34,6 @@
     font-size: 0.77rem !important;
   }
   
-  
-
-  
-  
   ::ng-deep .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__leading {
     border-color: var(--primary-color);
     border-width: 1px;
@@ -86,11 +82,11 @@
   }
  
   /* icon */
- 
   
   ::ng-deep.mat-icon {
     margin: 0rem 2.8rem 4rem 0rem;
     size: 4px !important;
+    color: var(--secondary-color);
   }
   
   ::ng-deep.mat-mdc-form-field-required-marker {
